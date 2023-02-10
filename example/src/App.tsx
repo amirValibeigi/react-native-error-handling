@@ -1,18 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-error-handling';
+import { StyleSheet, View, Button } from 'react-native';
+import { logE, logS, logV, testError } from 'react-native-error-handling';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+  const onPress = React.useCallback(() => {
+    logV('test', 1);
+    logV('test', null);
+    logV('test', undefined);
+    logV('test', 'message');
+    logV('test', { title: 'test v', main: 1 });
+    logV('test', [{ title: 'test v', main: 1 }]);
+    // testError();
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button title="log" onPress={onPress} />
     </View>
   );
 }

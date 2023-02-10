@@ -1,0 +1,11 @@
+<resources>
+    <string name="title_activity_crash">CrashActivity</string>
+
+    <string name="string_not_found">موردی برای نمایش وجود ندارد!</string>
+    <string name="error_internet">اینترنت خود را بررسی نمایید.</string>
+    <string name="error_server">خطا در برقرار با سایت.</string>
+    <string name="error_system">با عرض معذرت برنامه دچار مشکلاتی شده است لطفا مجددا اقدام فرمایید.\nخطای رخ داده به توسعه دهنده اعلام خواهد شد و در روز های آینده رفع خواهد شد.</string>
+    <string name="error_system_run_again">اجرای دوباره</string>
+    <string name="error_system_exit">خروج</string>
+    <string name="error_system_share">ارسال به سازنده</string>
+</resources>

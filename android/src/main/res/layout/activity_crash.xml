@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/activity_crash_image"
+        android:layout_width="@dimen/size150dp"
+        android:layout_height="@dimen/size150dp"
+        android:contentDescription="@string/string_not_found"
+        android:src="@drawable/image_error_system"
+        app:layout_constraintBottom_toTopOf="@id/activity_crash_caption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/activity_crash_caption"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size50dp"
+        android:text="@string/error_system"
+        android:textSize="@dimen/size15sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_gray_dark"
+        app:layout_constraintBottom_toTopOf="@id/activity_crash_run"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_crash_image" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_crash_exit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size12dp"
+        android:background="@drawable/custom_theme_toast_error"
+        android:gravity="center"
+        android:minHeight="@dimen/size50dp"
+        android:text="@string/error_system_exit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/activity_crash_run"
+        app:layout_constraintEnd_toStartOf="@id/activity_crash_run"
+        app:layout_constraintHeight_min="@dimen/size50dp"
+        app:layout_constraintHorizontal_weight="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/activity_crash_run" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_crash_run"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size12dp"
+        android:layout_marginTop="@dimen/size20dp"
+        android:background="@drawable/custom_theme_toast_successfully"
+        android:gravity="center"
+        android:minHeight="@dimen/size50dp"
+        android:text="@string/error_system_run_again"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_min="@dimen/size50dp"
+        app:layout_constraintHorizontal_weight="0.06"
+        app:layout_constraintStart_toEndOf="@id/activity_crash_exit"
+        app:layout_constraintTop_toBottomOf="@id/activity_crash_caption" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/activity_crash_share"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size12dp"
+        android:layout_marginStart="@dimen/size60dp"
+        android:layout_marginTop="@dimen/size50dp"
+        android:layout_marginEnd="@dimen/size60dp"
+        android:background="@drawable/custom_theme_toast_warning"
+        android:gravity="center"
+        android:minHeight="@dimen/size50dp"
+        android:text="@string/error_system_share"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_min="@dimen/size20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_crash_run" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
