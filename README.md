@@ -4,18 +4,44 @@ error handling
 
 ## Installation
 
+clone project
+
 ```sh
-npm install react-native-error-handling
+npm install "{PATH}/react-native-error-handling"
+```
+
+MainApplication.java
+
+```java
+  @Override
+  public void onCreate() {
+    super.onCreate();
+
+    Thread.setDefaultUncaughtExceptionHandler(
+            new ExceptionHandler(
+                    getBaseContext(),
+                    "http://192.168.1.148:8000/api/app/report",//api post info, error, file
+                    MainActivity.class,// run this activity
+                    true//show button send error
+            )
+    );
+
+    ...
+  }
 ```
 
 ## Usage
 
 ```js
-import { multiply } from 'react-native-error-handling';
+import { log, logV, logE, logS, testError } from 'react-native-error-handling';
 
 // ...
 
-const result = await multiply(3, 7);
+log('E', 'name_log', 'message');
+logV('name_logV', { message: 'text', other: '...' });
+logE('name_logE', 1);
+logS('name_logS');
+testError(); //make crash divide by zero
 ```
 
 ## Contributing
