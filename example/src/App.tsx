@@ -6,12 +6,12 @@ import { logE, logS, logV, testError } from 'react-native-error-handling';
 export default function App() {
   const onPress = React.useCallback(() => {
     logV('test', 1);
-    logV('test', null);
-    logV('test', undefined);
+    logE('test', null);
+    logS('test', undefined);
     logV('test', 'message');
     logV('test', { title: 'test v', main: 1 });
     logV('test', [{ title: 'test v', main: 1 }]);
-    // testError();
+    testError();
   }, []);
 
   return (

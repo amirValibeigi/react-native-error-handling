@@ -13,6 +13,9 @@ npm install "{PATH}/react-native-error-handling"
 MainApplication.java
 
 ```java
+import com.errorhandling.utils.ExceptionHandler;
+...
+
   @Override
   public void onCreate() {
     super.onCreate();
