@@ -67,7 +67,7 @@ dependencies {
   // implementation 'com.facebook.react:hermes-android:+'
   // implementation 'com.facebook.react:hermes-engine:+'
   // implementation 'com.facebook.react:react-android:+'
-  implementation 'androidx.constraintlayout:constraintlayout:2.0.+'
+//  implementation 'androidx.constraintlayout:constraintlayout:2.0.+'
 
   constraints {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.8.0") {

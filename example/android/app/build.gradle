@@ -117,6 +117,14 @@ android {
             keyAlias 'androiddebugkey'
             keyPassword 'android'
         }
+        release {
+            if (project.hasProperty('MYAPP_AMIR_UPLOAD_STORE_FILE')) {
+                storeFile file(MYAPP_AMIR_UPLOAD_STORE_FILE)
+                storePassword MYAPP_AMIR_UPLOAD_STORE_PASSWORD
+                keyAlias TEST_APP_UPLOAD_KEY_ALIAS
+                keyPassword TEST_APP_UPLOAD_KEY_PASSWORD
+            }
+        }
     }
     buildTypes {
         debug {
@@ -128,6 +136,7 @@ android {
             signingConfig signingConfigs.debug
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+            signingConfig signingConfigs.release
         }
     }
 

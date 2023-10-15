@@ -1,11 +1,9 @@
 <resources>
     <string name="title_activity_crash">CrashActivity</string>
 
-    <string name="string_not_found">موردی برای نمایش وجود ندارد!</string>
-    <string name="error_internet">اینترنت خود را بررسی نمایید.</string>
-    <string name="error_server">خطا در برقرار با سایت.</string>
-    <string name="error_system">با عرض معذرت برنامه دچار مشکلاتی شده است لطفا مجددا اقدام فرمایید.\nخطای رخ داده به توسعه دهنده اعلام خواهد شد و در روز های آینده رفع خواهد شد.</string>
-    <string name="error_system_run_again">اجرای دوباره</string>
-    <string name="error_system_exit">خروج</string>
-    <string name="error_system_share">ارسال به سازنده</string>
+    <string name="rneh_not_found">not found content!</string>
+    <string name="rneh_error_system">Sorry, the program has encountered a problem, please try again.\nThe error will be reported to the developer and fixed in the coming days.</string>
+    <string name="rneh_btn_run_again">try again</string>
+    <string name="rneh_btn_exit">exit</string>
+    <string name="rneh_btn_share">send to developer</string>
 </resources>

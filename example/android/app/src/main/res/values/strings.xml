@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">ErrorHandlingExample</string>
+    
+    <!-- custom string -->
+    <!-- <string name="rneh_not_found">موردی برای نمایش وجود ندارد!</string>
+    <string name="rneh_error_system">با عرض معذرت برنامه دچار مشکل شده است، لطفا مجددا اقدام کنید.\nخطای رخ داده به توسعه دهنده اعلام و در روز های آینده رفع خواهد شد.</string>
+    <string name="rneh_btn_run_again">اجرای دوباره</string>
+    <string name="rneh_btn_exit">خروج</string>
+    <string name="rneh_btn_share">ارسال به سازنده</string> -->
 </resources>

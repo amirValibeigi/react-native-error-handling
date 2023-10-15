@@ -1,13 +1,12 @@
 package com.errorhandling;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.AppCompatButton;
-
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import java.io.File;
 import java.util.LinkedHashMap;
@@ -16,7 +15,7 @@ import java.util.Map;
 import com.errorhandling.utils.CallAPI;
 import com.errorhandling.utils.LogFile;
 
-public class CrashActivity extends AppCompatActivity {
+public class CrashActivity extends Activity {
   public static final String KeyDebugGroups = "CrashActivity-debug-groups";
   public static final String KeyCallBackActivity = "CrashActivity-call-back-activity";
   public static final String KeyInfo = "CrashActivity-info";
@@ -31,9 +30,9 @@ public class CrashActivity extends AppCompatActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_crash);
 
-    AppCompatButton btnRun = findViewById(R.id.activity_crash_run);
-    AppCompatButton btnExit = findViewById(R.id.activity_crash_exit);
-    AppCompatButton btnShare = findViewById(R.id.activity_crash_share);
+    Button btnRun = findViewById(R.id.activity_crash_run);
+    Button btnExit = findViewById(R.id.activity_crash_exit);
+    Button btnShare = findViewById(R.id.activity_crash_share);
 
     Intent intent = getIntent();
 
