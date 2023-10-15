@@ -72,3 +72,4 @@ android/gradle
 android/gradlew
 android/gradlew.bat
 yarn.lock
+package-lock.json
