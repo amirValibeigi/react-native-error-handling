@@ -39,7 +39,6 @@ public class CallAPI extends AsyncTask<Map<String, String>, Void, Void> {
       MultipartBody.Builder body = new MultipartBody.Builder().setType(MultipartBody.FORM);
 
       for (String k : map.keySet()) {
-//          data.append("&").append(URLEncoder.encode(k, "UTF-8")).append("=").append(URLEncoder.encode(map.get(k), "UTF-8"));
         if (k.equals("file")) {
           body.addFormDataPart("file", map.get(k), RequestBody.create(MediaType.parse("application/octet-stream"), new File(map.get(k))));
         } else {
@@ -56,30 +55,6 @@ public class CallAPI extends AsyncTask<Map<String, String>, Void, Void> {
       } else {
         Log.i("response", "doInBackground: Error");
       }
-
-//      URL url = new URL(urlString);
-//      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//
-//      connection.setRequestMethod("POST");
-//      connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-//      connection.setRequestProperty("Accept", "*/*");
-//
-//      OutputStreamWriter out = new OutputStreamWriter(connection.getOutputStream());
-//
-//      BufferedWriter writer = new BufferedWriter(out);
-//      writer.write(data.substring(1));
-//      writer.flush();
-//      writer.close();
-//      out.close();
-//
-//
-//      connection.connect();
-//
-//      if (connection.getResponseCode() == 200) {
-//        Log.i("response", "doInBackground: Success");
-//      } else {
-//        Log.i("response", "doInBackground: Error");
-//      }
     } catch (Exception e) {
       e.printStackTrace();
     }

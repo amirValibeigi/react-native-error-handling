@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Button } from 'react-native';
+import { Button, StyleSheet, View } from 'react-native';
 import { logE, logS, logV, testError } from 'react-native-error-handling';
 
 export default function App() {

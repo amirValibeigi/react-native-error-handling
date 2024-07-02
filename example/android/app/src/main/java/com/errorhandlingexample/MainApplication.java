@@ -58,7 +58,7 @@ public class MainApplication extends Application implements ReactApplication {
     Thread.setDefaultUncaughtExceptionHandler(
             new ExceptionHandler(
                     getBaseContext(),
-                    "http://192.168.1.148:8000/api/app/report",
+                    "http://192.168.1.100:8000/api/app/report",
                     MainActivity.class,
                     true
             )

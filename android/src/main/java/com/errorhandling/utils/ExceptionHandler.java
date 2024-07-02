@@ -12,6 +12,8 @@ import java.io.StringWriter;
 import java.io.Writer;
 
 import com.errorhandling.CrashActivity;
+import android.content.pm.PackageManager;
+import android.content.pm.PackageInfo;
 
 /**
  * report exception to api
@@ -73,6 +75,19 @@ public class ExceptionHandler implements Thread.UncaughtExceptionHandler {
 
   private void startCrashActivity(String trace) {
     new Thread(() -> {
+      String versionName = "-";
+      String versionCode = "-";
+      String packageName = "-";
+      
+      try {
+        PackageInfo info = context.getPackageManager()
+        .getPackageInfo(context.getPackageName(), 0);
+        versionName = info.versionName;
+        packageName = info.packageName;
+        versionCode = String.valueOf(info.versionCode);
+
+      } catch (PackageManager.NameNotFoundException e) {
+      }
 
       Looper.prepare();
 
@@ -81,7 +96,7 @@ public class ExceptionHandler implements Thread.UncaughtExceptionHandler {
       i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
       i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-      i.putExtra(CrashActivity.KeyInfo, "p: " + Build.PRODUCT + "\n" + "d: " + Build.DEVICE + "\n" + "s: " + Build.VERSION.SDK_INT);
+      i.putExtra(CrashActivity.KeyInfo, "p: " + Build.PRODUCT + "\n" + "d: " + Build.DEVICE + "\n" + "s: " + Build.VERSION.SDK_INT  + "\n" + "vc: " + versionCode + "\n" + "pn: " + packageName + "\n" + "vn: " + versionName);
       i.putExtra(CrashActivity.KeyTrace, trace);
       i.putExtra(CrashActivity.KeyUrlApi, urlApi);
       i.putExtra(CrashActivity.KeyDebugGroups, groupDebug);
